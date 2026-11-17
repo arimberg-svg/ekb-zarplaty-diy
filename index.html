@@ -122,31 +122,52 @@
       font-size: 26px;
       letter-spacing: -0.03em;
     }
-    .role {
+    .key {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      gap: 12px;
       margin: 0 0 14px;
+    }
+    .key div {
+      border: 1px solid var(--gray);
+      padding: 12px 14px;
+    }
+    .key p { margin: 4px 0 0; }
+    .pays {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 0 0 8px;
       padding-top: 12px;
       border-top: 1px solid var(--gray);
     }
-    .zone.head .role { border-top-color: rgba(255,255,255,0.35); }
-    .role b {
+    .zone.head .pays { border-top-color: rgba(255,255,255,0.35); }
+    .job {
+      margin: 0 0 10px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .line { margin: 0 0 12px; }
+    .tag {
       display: block;
+      margin-bottom: 4px;
       font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.04em;
       text-transform: uppercase;
-      margin-bottom: 4px;
+      color: var(--violet);
     }
-    .role strong {
+    .zone.head .tag,
+    .zone.head .job { color: var(--white); }
+    .line strong {
       display: block;
       font-family: "Arial Black", Arial, sans-serif;
-      font-size: clamp(22px, 2.4vw, 30px);
+      font-size: clamp(22px, 2.2vw, 30px);
       letter-spacing: -0.03em;
-      line-height: 1;
+      line-height: 1.05;
     }
-    .role span { display: block; margin-top: 4px; font-size: 13px; }
     .note {
       border-left: 4px solid var(--violet);
       background: var(--white);
@@ -248,7 +269,7 @@
       .zones, .split, .places { grid-template-columns: 1fr; }
       .bar { grid-template-columns: 1fr; gap: 4px; }
       .val { text-align: left; }
-      .role { grid-template-columns: 1fr; }
+      .key, .pays { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -259,7 +280,7 @@
       <p class="motto">Делаем мир крепче</p>
       <p class="kicker">Магазины крепежа и товаров для ремонта · осень 2026</p>
       <h1>Сколько платить продавцу и кладовщику</h1>
-      <p class="lead">Все цифры на этой странице уже на руки, за полный месяц и по белой зарплате. Так человек сравнивает объявления. Где в вакансии было написано «до налога», вычтен НДФЛ 13%.</p>
+      <p class="lead">Все суммы на странице — «на руки» за полный месяц (официально). Если в вакансии сумма была до налогов, мы уже вычли 13% НДФЛ для удобного сравнения.</p>
       <div class="meta">
         <span>Срез вакансий: август–ноябрь 2026</span>
         <span>Собрано 17 ноября 2026</span>
@@ -279,81 +300,91 @@
     <section id="stavki">
       <div class="wrap">
         <h2>Какую сумму ставить</h2>
-        <p class="sub">Первая цифра — то, что пишем в вакансии. Вторая — на какого человека закрываем смену. При графике 2/2 по <span class="sum">11⁠–⁠12</span> часов берите верх. При 5/2 по 8 часов хватает середины.</p>
+        <div class="key">
+          <div>
+            <span class="tag">В вакансии пишем</span>
+            <p>Эту сумму ставим в объявление.</p>
+          </div>
+          <div>
+            <span class="tag">Платим человеку</span>
+            <p>На эту вилку закрываем смену.</p>
+          </div>
+        </div>
+        <p class="sub">Подпись стоит над своей цифрой. «В вакансии пишем» — сумма для объявления. «Платим человеку» — вилка, на которую закрываем смену. График 2/2 по 11–12 часов: верх этой вилки. График 5/2 по 8 часов: середина вилки.</p>
         <div class="zones">
           <article class="zone head">
             <p class="where">Зона 1</p>
             <h3>Сёла и малые города юга</h3>
-            <div class="role">
+            <div class="pays">
               <div>
-                <b>Продавец в вакансии</b>
-                <strong><span class="sum">от 65 000</span></strong>
-                <span>хорошему <span class="sum">70⁠–⁠80 тыс.</span></span>
+                <p class="job">Продавец</p>
+                <p class="line"><span class="tag">В вакансии пишем</span><strong class="sum">от&nbsp;65&nbsp;000</strong></p>
+                <p class="line"><span class="tag">Платим человеку</span><strong class="sum">70&nbsp;000–80&nbsp;000</strong></p>
               </div>
               <div>
-                <b>Кладовщик в вакансии</b>
-                <strong><span class="sum">от 65 000</span></strong>
-                <span>хорошему <span class="sum">70⁠–⁠80 тыс.</span></span>
+                <p class="job">Кладовщик</p>
+                <p class="line"><span class="tag">В вакансии пишем</span><strong class="sum">от&nbsp;65&nbsp;000</strong></p>
+                <p class="line"><span class="tag">Платим человеку</span><strong class="sum">70&nbsp;000–80&nbsp;000</strong></p>
               </div>
             </div>
           </article>
           <article class="zone">
             <p class="where">Отдельно внутри зоны 1</p>
             <h3>Горный Щит</h3>
-            <div class="role">
+            <div class="pays">
               <div>
-                <b>Продавец в вакансии</b>
-                <strong><span class="sum">от 70 000</span></strong>
-                <span>хорошему <span class="sum">75⁠–⁠85 тыс.</span></span>
+                <p class="job">Продавец</p>
+                <p class="line"><span class="tag">В вакансии пишем</span><strong class="sum">от&nbsp;70&nbsp;000</strong></p>
+                <p class="line"><span class="tag">Платим человеку</span><strong class="sum">75&nbsp;000–85&nbsp;000</strong></p>
               </div>
               <div>
-                <b>Кладовщик в вакансии</b>
-                <strong><span class="sum">от 70 000</span></strong>
-                <span>хорошему <span class="sum">80⁠–⁠90 тыс.</span></span>
+                <p class="job">Кладовщик</p>
+                <p class="line"><span class="tag">В вакансии пишем</span><strong class="sum">от&nbsp;70&nbsp;000</strong></p>
+                <p class="line"><span class="tag">Платим человеку</span><strong class="sum">80&nbsp;000–90&nbsp;000</strong></p>
               </div>
             </div>
           </article>
           <article class="zone">
             <p class="where">Зона 2</p>
             <h3>Берёзовский и Верхняя Пышма</h3>
-            <div class="role">
+            <div class="pays">
               <div>
-                <b>Продавец в вакансии</b>
-                <strong><span class="sum">от 70 000</span></strong>
-                <span>хорошему <span class="sum">80⁠–⁠90 тыс.</span></span>
+                <p class="job">Продавец</p>
+                <p class="line"><span class="tag">В вакансии пишем</span><strong class="sum">от&nbsp;70&nbsp;000</strong></p>
+                <p class="line"><span class="tag">Платим человеку</span><strong class="sum">80&nbsp;000–90&nbsp;000</strong></p>
               </div>
               <div>
-                <b>Кладовщик в вакансии</b>
-                <strong><span class="sum">от 75 000</span></strong>
-                <span>хорошему <span class="sum">80⁠–⁠95 тыс.</span></span>
+                <p class="job">Кладовщик</p>
+                <p class="line"><span class="tag">В вакансии пишем</span><strong class="sum">от&nbsp;75&nbsp;000</strong></p>
+                <p class="line"><span class="tag">Платим человеку</span><strong class="sum">80&nbsp;000–95&nbsp;000</strong></p>
               </div>
             </div>
           </article>
           <article class="zone">
             <p class="where">Зона 3</p>
             <h3>Екатеринбург</h3>
-            <div class="role">
+            <div class="pays">
               <div>
-                <b>Продавец в вакансии</b>
-                <strong><span class="sum">от 75 000</span></strong>
-                <span>хорошему <span class="sum">85⁠–⁠95 тыс.</span></span>
+                <p class="job">Продавец</p>
+                <p class="line"><span class="tag">В вакансии пишем</span><strong class="sum">от&nbsp;75&nbsp;000</strong></p>
+                <p class="line"><span class="tag">Платим человеку</span><strong class="sum">85&nbsp;000–95&nbsp;000</strong></p>
               </div>
               <div>
-                <b>Кладовщик в вакансии</b>
-                <strong><span class="sum">от 80 000</span></strong>
-                <span>хорошему <span class="sum">90⁠–⁠100 тыс.</span></span>
+                <p class="job">Кладовщик</p>
+                <p class="line"><span class="tag">В вакансии пишем</span><strong class="sum">от&nbsp;80&nbsp;000</strong></p>
+                <p class="line"><span class="tag">Платим человеку</span><strong class="sum">90&nbsp;000–100&nbsp;000</strong></p>
               </div>
             </div>
           </article>
         </div>
-        <p class="note">В Курганово «Строительный Двор» уже стоит на улице Морозова, 7. Туда в вакансии лучше писать <span class="sum">от 70 000</span>. Опытный продавец, который считает крепёж, стоит на верхней границе. Новичок начинает с нижней и видит, куда вырастет после испытательного срока. <span class="sum">80 000</span> на руки в штатном расписании — это оклад <span class="sum">91 954</span> до налога. Пол по закону на руки в этой части области — <span class="sum">27 107</span>.</p>
+        <p class="note">В Курганово «Строительный Двор» уже стоит на улице Морозова, 7. В вакансии туда пишем от&nbsp;70&nbsp;000. Опытному продавцу, который считает крепёж, платим верх вилки. Новичку платим низ вилки, с ростом после испытательного срока. 80&nbsp;000 «на руки» в штатном расписании — это оклад 91&nbsp;954 до налога. Районный коэффициент 15% уже внутри суммы. Пол по закону «на руки» в этой части области — 27&nbsp;107.</p>
       </div>
     </section>
 
     <section id="sravnenie">
       <div class="wrap">
         <h2>С чем человек сравнивает объявление</h2>
-        <p class="sub">Полоска показывает нижнюю границу на руки. Длиннее полоска — выше порог, с которого начинается вакансия. Наша ставка для Екатеринбурга стоит рядом с теми, кого кандидат откроет в тот же вечер.</p>
+        <p class="sub">Полоска — это сумма «В вакансии пишем», уже «на руки». Так удобно сравнить наше объявление с чужим.</p>
         <div class="split">
           <div>
             <div class="bar-block">
@@ -419,9 +450,9 @@
           </div>
           <aside class="card">
             <h3>Почему не средняя по области</h3>
-            <p>Средняя по Свердловской области за январь–август 2026 года — <span class="sum">81 961</span> на руки. По Екатеринбургу и Верхней Пышме за 2025 год муниципальная средняя была <span class="sum">выше 100 920</span>. Эти цифры держат заводы и УГМК.</p>
-            <p>Торговля в целом за январь–февраль 2026 года — <span class="sum">65 849</span> на руки. Продавец «Пятёрочки» в Верхней Пышме получает <span class="sum">43 674⁠–⁠58 986</span>. Это другая работа: консультант по крепежу считает расход и отвечает за полку.</p>
-            <p>У «Лемана ПРО» обычный месяц без сверхурочных выходит <span class="sum">около 52 900</span> на руки. Верх их объявления — <span class="sum">68 338</span>, и это ещё без квартальной премии. В карточке час стоит 269 рублей на руки, питание — <span class="sum">5 220</span>.</p>
+            <p>Среднюю по области для кассы не берём. За январь–август 2026 года это <span class="sum">81&nbsp;961</span> «на руки». По Екатеринбургу и Верхней Пышме за 2025 год муниципальная средняя была выше <span class="sum">100&nbsp;920</span> «на руки». Эти суммы держат заводы и УГМК.</p>
+            <p>По торговле за январь–февраль 2026 года средняя — <span class="sum">65&nbsp;849</span> «на руки». Продавец «Пятёрочки» в Верхней Пышме получает <span class="sum">43&nbsp;674–58&nbsp;986</span> «на руки». Консультант по крепежу считает расход, поэтому сравниваем его со строймагазином.</p>
+            <p>У «Лемана ПРО» обычный месяц без сверхурочных — около <span class="sum">52&nbsp;900</span> «на руки». Верх объявления — <span class="sum">68&nbsp;338</span> «на руки», без квартальной премии. Час в их карточке — 269 рублей «на руки», питание — <span class="sum">5&nbsp;220</span> «на руки».</p>
           </aside>
         </div>
       </div>
@@ -430,7 +461,7 @@
     <section id="sela">
       <div class="wrap">
         <h2>Сёла и малые города</h2>
-        <p class="sub">Горный Щит, Арамиль, Белоярский, Верхнее Дуброво, Сысерть, Бородулино, Курганово. Арамиль и Сысерть по статусу города, около 20 тысяч человек. Платить их всё равно этой зоной: люди уже сравнивают себя с сетью, а не с сельской кассой.</p>
+        <p class="sub">Горный Щит, Арамиль, Белоярский, Верхнее Дуброво, Сысерть, Бородулино, Курганово. Арамиль и Сысерть по статусу города, около 20 тысяч человек. Платим их этой зоной: люди сравнивают объявление с сетью.</p>
         <div class="places">
           <article class="place">
             <h3>Горный Щит</h3>
@@ -457,14 +488,14 @@
             <p><span class="sum">1 190</span> и 920 человек. В Бородулино удобнее одна роль на зал и склад, <span class="sum">75 000⁠–⁠85 000</span>. В Курганово на Морозова, 7 уже работает «Строительный Двор».</p>
           </article>
         </div>
-        <p class="note">Вакансия «Кашино» у «Строительного Двора» — <span class="sum">60 000⁠–⁠90 000</span> на руки и проезд из Арамили, Белоярского, Верхнего Дуброво и соседних деревень. «Заповедник» в посёлке Габиевский — <span class="sum">65 000⁠–⁠90 000</span>. Магазин в селе выигрывает тем, что до работы не надо ехать. Ставка ниже <span class="sum">65 000</span> этот довод не перекрывает.</p>
+        <p class="note">Вакансия «Кашино» у «Строительного Двора» — <span class="sum">60&nbsp;000–90&nbsp;000</span> «на руки», плюс проезд из Арамили, Белоярского, Верхнего Дуброво и соседних деревень. «Заповедник» в посёлке Габиевский — <span class="sum">65&nbsp;000–90&nbsp;000</span> «на руки». Магазин в селе удобен тем, что до работы не надо ехать. Ниже <span class="sum">65&nbsp;000</span> в вакансии человек уедет в смену на сеть.</p>
       </div>
     </section>
 
     <section id="goroda">
       <div class="wrap">
         <h2>Берёзовский и Верхняя Пышма</h2>
-        <p class="sub">Это уже городской рынок. До Екатеринбурга люди ездят на обычную смену, а в Пышме складские деньги держат ещё и заводы.</p>
+        <p class="sub">Здесь уже городской рынок. До Екатеринбурга люди ездят на обычную смену. В Пышме складские суммы держат ещё и заводы.</p>
         <table>
           <thead>
             <tr>
@@ -511,14 +542,14 @@
             </tr>
           </tbody>
         </table>
-        <p class="note">Ночной склад «Пятёрочки» — распределительный центр, не кладовая магазина. Его стоит помнить как место, куда может уйти сильный кладовщик. Рядом ещё «ДомоСтрой» на Александровском проспекте, 1, и вторая точка «Строительного Двора» на Орджоникидзе, 1. По ним отдельной вилки в этой выборке нет.</p>
+        <p class="note">Ночной склад «Пятёрочки» — распределительный центр, не кладовая магазина. Сильный кладовщик может уйти туда. Рядом ещё «ДомоСтрой» на Александровском проспекте, 1, и вторая точка «Строительного Двора» на Орджоникидзе, 1. По ним отдельной суммы в этой выборке нет.</p>
       </div>
     </section>
 
     <section id="ekb">
       <div class="wrap">
         <h2>Екатеринбург</h2>
-        <p class="sub">Рядом и большой зал, и склад крепежа. Продавцу, который консультирует, нужно <span class="sum">85 000⁠–⁠95 000</span>. Кладовщику, который принимает, собирает и ведёт документы, — <span class="sum">90 000⁠–⁠100 000</span>.</p>
+        <p class="sub">Рядом большой зал и склад крепежа. Продавцу, который консультирует, платим <span class="sum">85&nbsp;000–95&nbsp;000</span>. Кладовщику на приёмке, сборке и документах платим <span class="sum">90&nbsp;000–100&nbsp;000</span>. Это строка «Платим человеку».</p>
         <table>
           <thead>
             <tr>
@@ -570,14 +601,14 @@
             </tr>
           </tbody>
         </table>
-        <p class="note">У «Стройметиза» к <span class="sum">90 000⁠–⁠95 000</span> добавляется <span class="sum">7 100</span> на питание. Это самый близкий склад по товару. В карточке «Максидома» на Шефской, 107 вид суммы не указан: если <span class="sum">51 000</span> были до налога, на руки выходит <span class="sum">44 370</span>. В вилку эту карточку не брали. Крупные залы для сравнения: «Лемана ПРО» на Металлургов и в Базовом переулке, «Петрович», «Максидом» на Шефской и Тверитина, «Строительный Двор» на Шефской.</p>
+        <p class="note">У «Стройметиза» к <span class="sum">90&nbsp;000–95&nbsp;000</span> «на руки» добавляется <span class="sum">7&nbsp;100</span> на питание. Это самый близкий склад по товару. В карточке «Максидома» на Шефской, 107 не сказано, до налогов сумма или уже выплата. Если <span class="sum">51&nbsp;000</span> были до налогов, «на руки» выходит <span class="sum">44&nbsp;370</span>. В сравнение эту карточку не брали.</p>
       </div>
     </section>
   </main>
 
   <footer>
     <div class="wrap">
-      <p>Цифры взяты из открытых вакансий, это не расчётные листки. Часть объявлений к ноябрю могла закрыться. Местные магазины в Сысерти, Арамили и Горном Щите сумму не публикуют, поэтому по ним нет строки «они платят столько-то».</p>
+      <p>Суммы взяты из открытых вакансий, это не расчётные листки. Часть объявлений к ноябрю могла закрыться. Местные магазины в Сысерти, Арамили и Горном Щите свою сумму не публикуют.</p>
       <p>Таблицы с адресами, датами и ссылками на вакансии лежат в папке data этого репозитория.</p>
     </div>
   </footer>
