@@ -264,21 +264,48 @@
       text-wrap: pretty;
       hyphens: none;
     }
-    .cond {
+    .rules {
       border: 1px solid var(--gray);
-      padding: 16px 18px 8px;
-      margin: 0 0 12px;
+      padding: 14px 16px 6px;
+      margin: 0 0 14px;
     }
-    .cond h3 {
-      margin: 0 0 10px;
+    .rules p { margin: 0 0 8px; }
+    .zgrid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .zcard {
+      border: 1px solid var(--gray);
+      padding: 14px 14px 8px;
+    }
+    .zcard h3 {
+      margin: 0;
       font-size: 20px;
       color: var(--violet);
       font-family: "Arial Black", Arial, sans-serif;
       letter-spacing: -0.02em;
     }
-    .cond ul { margin: 0; padding-left: 18px; }
-    .cond p { margin: 0 0 8px; }
-    .cond li { margin: 0 0 8px; }
+    .zcard .zplace { margin: 4px 0 10px; font-size: 14px; }
+    .zcard table { width: 100%; border-collapse: collapse; }
+    .zcard th, .zcard td {
+      text-align: right;
+      padding: 8px 6px;
+      border-bottom: 1px solid var(--gray);
+      font-size: 14px;
+    }
+    .zcard th:first-child, .zcard td:first-child { text-align: left; }
+    .zcard th {
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--gray);
+    }
+    .zcard td.num {
+      font-family: "Arial Black", Arial, sans-serif;
+      color: var(--violet);
+      white-space: nowrap;
+    }
     .ref {
       margin: 16px 0 0;
       padding: 14px 16px;
@@ -295,7 +322,7 @@
     .ref p { margin: 0; }
     .sum { white-space: nowrap; }
     @media (max-width: 800px) {
-      .zones, .split, .places { grid-template-columns: 1fr; }
+      .zones, .split, .places, .zgrid { grid-template-columns: 1fr; }
       .bar { grid-template-columns: 1fr; gap: 4px; }
       .val { text-align: left; }
       .key, .pays { grid-template-columns: 1fr; }
@@ -411,99 +438,79 @@
             </div>
           </article>
         </div>
-        <h2>Условия по зонам</h2>
-        <article class="cond" id="usloviya">
-          <h3>Условия по зарплате для продавца. Сёла и малые города юга</h3>
-          <p>Арамиль, Белоярский, Верхнее Дуброво, Сысерть, Бородулино.</p>
-          <ul>
-            <li>Вилка в вакансии: от <span class="sum">65&nbsp;000</span> до <span class="sum">80&nbsp;000</span> ₽ «на руки».</li>
-            <li>Как распределяем: новичкам ставим ближе к нижней границе (<span class="sum">65&nbsp;000</span> ₽), опытным продавцам, которые разбираются в крепеже и умеют его считать — платим по максимуму (<span class="sum">80&nbsp;000</span> ₽).</li>
-            <li>Оформление (штатное расписание): чтобы сотрудник получил <span class="sum">80&nbsp;000</span> ₽ «на руки», в документах ставим оклад <span class="sum">91&nbsp;954</span> ₽ (до вычета НДФЛ). Уральский районный коэффициент (15%) уже заложен в эту сумму.</li>
-            <li>Минимальный порог по закону: официальный МРОТ (минимум «на руки») для этой части области составляет <span class="sum">27&nbsp;107</span> ₽.</li>
-          </ul>
-        </article>
-        <article class="cond">
-          <h3>Условия по зарплате для кладовщика. Сёла и малые города юга</h3>
-          <p>Арамиль, Белоярский, Верхнее Дуброво, Сысерть, Бородулино.</p>
-          <ul>
-            <li>Вилка в вакансии: от <span class="sum">65&nbsp;000</span> до <span class="sum">80&nbsp;000</span> ₽ «на руки».</li>
-            <li>Как распределяем: новичкам ставим ближе к нижней границе (<span class="sum">65&nbsp;000</span> ₽), опытному кладовщику, который принимает товар и собирает заказы, платим по максимуму (<span class="sum">80&nbsp;000</span> ₽).</li>
-            <li>Оформление (штатное расписание): чтобы сотрудник получил <span class="sum">80&nbsp;000</span> ₽ «на руки», в документах ставим оклад <span class="sum">91&nbsp;954</span> ₽ (до вычета НДФЛ). Уральский районный коэффициент (15%) уже заложен в эту сумму.</li>
-            <li>Минимальный порог по закону: официальный МРОТ (минимум «на руки») для этой части области составляет <span class="sum">27&nbsp;107</span> ₽.</li>
-          </ul>
-        </article>
-        <article class="cond">
-          <h3>Условия по зарплате для продавца в Курганово (ул. Морозова, 7)</h3>
-          <ul>
-            <li>Вилка в вакансии: от <span class="sum">70&nbsp;000</span> до <span class="sum">80&nbsp;000</span> ₽ «на руки».</li>
-            <li>Как распределяем: новичкам ставим ближе к нижней границе (<span class="sum">70&nbsp;000</span> ₽), опытным продавцам, которые разбираются в крепеже и умеют его считать — платим по максимуму (<span class="sum">80&nbsp;000</span> ₽).</li>
-            <li>Оформление (штатное расписание): чтобы сотрудник получил <span class="sum">80&nbsp;000</span> ₽ «на руки», в документах ставим оклад <span class="sum">91&nbsp;954</span> ₽ (до вычета НДФЛ). Уральский районный коэффициент (15%) уже заложен в эту сумму.</li>
-            <li>Минимальный порог по закону: официальный МРОТ (минимум «на руки») для этой части области составляет <span class="sum">27&nbsp;107</span> ₽.</li>
-          </ul>
-        </article>
-        <article class="cond">
-          <h3>Условия по зарплате для кладовщика в Курганово (ул. Морозова, 7)</h3>
-          <ul>
-            <li>Вилка в вакансии: от <span class="sum">65&nbsp;000</span> до <span class="sum">80&nbsp;000</span> ₽ «на руки».</li>
-            <li>Как распределяем: новичкам ставим ближе к нижней границе (<span class="sum">65&nbsp;000</span> ₽), опытному кладовщику, который принимает товар и собирает заказы, платим по максимуму (<span class="sum">80&nbsp;000</span> ₽).</li>
-            <li>Оформление (штатное расписание): чтобы сотрудник получил <span class="sum">80&nbsp;000</span> ₽ «на руки», в документах ставим оклад <span class="sum">91&nbsp;954</span> ₽ (до вычета НДФЛ). Уральский районный коэффициент (15%) уже заложен в эту сумму.</li>
-            <li>Минимальный порог по закону: официальный МРОТ (минимум «на руки») для этой части области составляет <span class="sum">27&nbsp;107</span> ₽.</li>
-          </ul>
-        </article>
-        <article class="cond">
-          <h3>Условия по зарплате для продавца в Горном Щите</h3>
-          <ul>
-            <li>Вилка в вакансии: от <span class="sum">70&nbsp;000</span> до <span class="sum">85&nbsp;000</span> ₽ «на руки».</li>
-            <li>Как распределяем: новичкам ставим ближе к нижней границе (<span class="sum">70&nbsp;000</span> ₽), опытным продавцам, которые разбираются в крепеже и умеют его считать — платим по максимуму (<span class="sum">85&nbsp;000</span> ₽).</li>
-            <li>Оформление (штатное расписание): чтобы сотрудник получил <span class="sum">85&nbsp;000</span> ₽ «на руки», в документах ставим оклад <span class="sum">97&nbsp;701</span> ₽ (до вычета НДФЛ). Уральский районный коэффициент (15%) уже заложен в эту сумму.</li>
-            <li>Минимальный порог по закону: официальный МРОТ (минимум «на руки») для этой части области составляет <span class="sum">27&nbsp;107</span> ₽.</li>
-          </ul>
-        </article>
-        <article class="cond">
-          <h3>Условия по зарплате для кладовщика в Горном Щите</h3>
-          <ul>
-            <li>Вилка в вакансии: от <span class="sum">70&nbsp;000</span> до <span class="sum">90&nbsp;000</span> ₽ «на руки».</li>
-            <li>Как распределяем: новичкам ставим ближе к нижней границе (<span class="sum">70&nbsp;000</span> ₽), опытному кладовщику, который принимает товар и собирает заказы, платим по максимуму (<span class="sum">90&nbsp;000</span> ₽).</li>
-            <li>Оформление (штатное расписание): чтобы сотрудник получил <span class="sum">90&nbsp;000</span> ₽ «на руки», в документах ставим оклад <span class="sum">103&nbsp;448</span> ₽ (до вычета НДФЛ). Уральский районный коэффициент (15%) уже заложен в эту сумму.</li>
-            <li>Минимальный порог по закону: официальный МРОТ (минимум «на руки») для этой части области составляет <span class="sum">27&nbsp;107</span> ₽.</li>
-          </ul>
-        </article>
-        <article class="cond">
-          <h3>Условия по зарплате для продавца в Берёзовском и Верхней Пышме</h3>
-          <ul>
-            <li>Вилка в вакансии: от <span class="sum">70&nbsp;000</span> до <span class="sum">90&nbsp;000</span> ₽ «на руки».</li>
-            <li>Как распределяем: новичкам ставим ближе к нижней границе (<span class="sum">70&nbsp;000</span> ₽), опытным продавцам, которые разбираются в крепеже и умеют его считать — платим по максимуму (<span class="sum">90&nbsp;000</span> ₽).</li>
-            <li>Оформление (штатное расписание): чтобы сотрудник получил <span class="sum">90&nbsp;000</span> ₽ «на руки», в документах ставим оклад <span class="sum">103&nbsp;448</span> ₽ (до вычета НДФЛ). Уральский районный коэффициент (15%) уже заложен в эту сумму.</li>
-            <li>Минимальный порог по закону: официальный МРОТ (минимум «на руки») для этой части области составляет <span class="sum">27&nbsp;107</span> ₽.</li>
-          </ul>
-        </article>
-        <article class="cond">
-          <h3>Условия по зарплате для кладовщика в Берёзовском и Верхней Пышме</h3>
-          <ul>
-            <li>Вилка в вакансии: от <span class="sum">75&nbsp;000</span> до <span class="sum">95&nbsp;000</span> ₽ «на руки».</li>
-            <li>Как распределяем: новичкам ставим ближе к нижней границе (<span class="sum">75&nbsp;000</span> ₽), опытному кладовщику, который принимает товар и собирает заказы, платим по максимуму (<span class="sum">95&nbsp;000</span> ₽).</li>
-            <li>Оформление (штатное расписание): чтобы сотрудник получил <span class="sum">95&nbsp;000</span> ₽ «на руки», в документах ставим оклад <span class="sum">109&nbsp;195</span> ₽ (до вычета НДФЛ). Уральский районный коэффициент (15%) уже заложен в эту сумму.</li>
-            <li>Минимальный порог по закону: официальный МРОТ (минимум «на руки») для этой части области составляет <span class="sum">27&nbsp;107</span> ₽.</li>
-          </ul>
-        </article>
-        <article class="cond">
-          <h3>Условия по зарплате для продавца в Екатеринбурге</h3>
-          <ul>
-            <li>Вилка в вакансии: от <span class="sum">75&nbsp;000</span> до <span class="sum">95&nbsp;000</span> ₽ «на руки».</li>
-            <li>Как распределяем: новичкам ставим ближе к нижней границе (<span class="sum">75&nbsp;000</span> ₽), опытным продавцам, которые разбираются в крепеже и умеют его считать — платим по максимуму (<span class="sum">95&nbsp;000</span> ₽).</li>
-            <li>Оформление (штатное расписание): чтобы сотрудник получил <span class="sum">95&nbsp;000</span> ₽ «на руки», в документах ставим оклад <span class="sum">109&nbsp;195</span> ₽ (до вычета НДФЛ). Уральский районный коэффициент (15%) уже заложен в эту сумму.</li>
-            <li>Минимальный порог по закону: официальный МРОТ (минимум «на руки») для этой части области составляет <span class="sum">27&nbsp;107</span> ₽.</li>
-          </ul>
-        </article>
-        <article class="cond">
-          <h3>Условия по зарплате для кладовщика в Екатеринбурге</h3>
-          <ul>
-            <li>Вилка в вакансии: от <span class="sum">80&nbsp;000</span> до <span class="sum">100&nbsp;000</span> ₽ «на руки».</li>
-            <li>Как распределяем: новичкам ставим ближе к нижней границе (<span class="sum">80&nbsp;000</span> ₽), опытному кладовщику, который принимает товар, собирает заказы и ведёт документы, платим по максимуму (<span class="sum">100&nbsp;000</span> ₽).</li>
-            <li>Оформление (штатное расписание): чтобы сотрудник получил <span class="sum">100&nbsp;000</span> ₽ «на руки», в документах ставим оклад <span class="sum">114&nbsp;942</span> ₽ (до вычета НДФЛ). Уральский районный коэффициент (15%) уже заложен в эту сумму.</li>
-            <li>Минимальный порог по закону: официальный МРОТ (минимум «на руки») для этой части области составляет <span class="sum">27&nbsp;107</span> ₽.</li>
-          </ul>
-        </article>
+        <h2 id="usloviya">Условия по зонам</h2>
+        <div class="rules">
+          <p>Это одинаково для всех зон, поэтому ниже не повторяем.</p>
+          <p>Вилка — «на руки». Новичку ставим ближе к «От». Опытному продавцу, который разбирается в крепеже и умеет его считать, и опытному кладовщику на приёмке и сборке платим «До».</p>
+          <p>Колонка «Оклад» — сумма в штатном расписании до НДФЛ, чтобы на руки вышло «До». Уральский коэффициент 15% уже заложен в эту сумму. Минимум по закону для этой части области — <span class="sum">27&nbsp;107</span> ₽ «на руки».</p>
+        </div>
+        <div class="zgrid">
+          <article class="zcard">
+            <h3>Сёла и малые города юга</h3>
+            <p class="zplace">Арамиль, Белоярский, Верхнее Дуброво, Сысерть, Бородулино</p>
+            <table>
+              <thead>
+                <tr><th>Должность</th><th>От</th><th>До</th><th>Оклад</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Продавец</td><td class="num">65&nbsp;000</td><td class="num">80&nbsp;000</td><td class="num">91&nbsp;954</td></tr>
+                <tr><td>Кладовщик</td><td class="num">65&nbsp;000</td><td class="num">80&nbsp;000</td><td class="num">91&nbsp;954</td></tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="zcard">
+            <h3>Курганово</h3>
+            <p class="zplace">ул. Морозова, 7. Рядом уже стоит «Строительный Двор», поэтому продавцу «От» выше.</p>
+            <table>
+              <thead>
+                <tr><th>Должность</th><th>От</th><th>До</th><th>Оклад</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Продавец</td><td class="num">70&nbsp;000</td><td class="num">80&nbsp;000</td><td class="num">91&nbsp;954</td></tr>
+                <tr><td>Кладовщик</td><td class="num">65&nbsp;000</td><td class="num">80&nbsp;000</td><td class="num">91&nbsp;954</td></tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="zcard">
+            <h3>Горный Щит</h3>
+            <p class="zplace">Село в городском округе, 19 км до центра.</p>
+            <table>
+              <thead>
+                <tr><th>Должность</th><th>От</th><th>До</th><th>Оклад</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Продавец</td><td class="num">70&nbsp;000</td><td class="num">85&nbsp;000</td><td class="num">97&nbsp;701</td></tr>
+                <tr><td>Кладовщик</td><td class="num">70&nbsp;000</td><td class="num">90&nbsp;000</td><td class="num">103&nbsp;448</td></tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="zcard">
+            <h3>Берёзовский и Верхняя Пышма</h3>
+            <p class="zplace">Города-спутники.</p>
+            <table>
+              <thead>
+                <tr><th>Должность</th><th>От</th><th>До</th><th>Оклад</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Продавец</td><td class="num">70&nbsp;000</td><td class="num">90&nbsp;000</td><td class="num">103&nbsp;448</td></tr>
+                <tr><td>Кладовщик</td><td class="num">75&nbsp;000</td><td class="num">95&nbsp;000</td><td class="num">109&nbsp;195</td></tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="zcard">
+            <h3>Екатеринбург</h3>
+            <p class="zplace">Большой зал и склады крепежа рядом.</p>
+            <table>
+              <thead>
+                <tr><th>Должность</th><th>От</th><th>До</th><th>Оклад</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Продавец</td><td class="num">75&nbsp;000</td><td class="num">95&nbsp;000</td><td class="num">109&nbsp;195</td></tr>
+                <tr><td>Кладовщик</td><td class="num">80&nbsp;000</td><td class="num">100&nbsp;000</td><td class="num">114&nbsp;942</td></tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
       </div>
     </section>
 
