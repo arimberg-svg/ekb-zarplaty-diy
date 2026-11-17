@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Сколько платить продавцу и кладовщику рядом с Екатеринбургом</title>
+  <meta name="description" content="Зарплаты на руки для продавца и кладовщика магазинов крепежа и стройматериалов: сёла юга, Горный Щит, Берёзовский, Верхняя Пышма и Екатеринбург. Осень 2026." />
+  <meta name="theme-color" content="#4208A8" />
+  <style>
+    :root {
+      --violet: #4208A8;
+      --gray: #CCCCCC;
+      --ink: #111111;
+      --white: #FFFFFF;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--white);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    img { display: block; border: 0; }
+    a { color: var(--violet); }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header.top {
+      padding: 28px 0 8px;
+    }
+    .logo { width: 280px; height: auto; }
+    .motto {
+      margin: 18px 0 0;
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      color: var(--violet);
+    }
+    .kicker {
+      margin: 22px 0 0;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+    h1 {
+      margin: 8px 0 0;
+      font-family: "Arial Black", Arial, sans-serif;
+      font-weight: 900;
+      font-size: clamp(32px, 5vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -0.035em;
+    }
+    .lead {
+      max-width: 720px;
+      margin: 16px 0 0;
+      font-size: 18px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0 0;
+    }
+    .meta span {
+      border: 1px solid var(--gray);
+      padding: 6px 10px;
+      font-size: 13px;
+    }
+    nav.jump {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 22px 0 8px;
+    }
+    nav.jump a {
+      text-decoration: none;
+      color: var(--ink);
+      border: 1px solid var(--ink);
+      padding: 8px 12px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    nav.jump a:hover { background: var(--violet); color: var(--white); border-color: var(--violet); }
+    section { padding: 28px 0; }
+    h2 {
+      margin: 0 0 8px;
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: clamp(24px, 3vw, 34px);
+      letter-spacing: -0.03em;
+      color: var(--violet);
+    }
+    .sub { margin: 0 0 18px; max-width: 720px; }
+    .zones {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .zone {
+      border: 1px solid var(--gray);
+      padding: 18px 18px 8px;
+      background: var(--white);
+    }
+    .zone.head {
+      background: var(--violet);
+      color: var(--white);
+      border-color: var(--violet);
+    }
+    .zone .where {
+      margin: 0;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .zone h3 {
+      margin: 6px 0 14px;
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: 26px;
+      letter-spacing: -0.03em;
+    }
+    .role {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 0 0 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--gray);
+    }
+    .zone.head .role { border-top-color: rgba(255,255,255,0.35); }
+    .role b {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .role strong {
+      display: block;
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: clamp(22px, 2.4vw, 30px);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+    .role span { display: block; margin-top: 4px; font-size: 13px; }
+    .note {
+      border-left: 4px solid var(--violet);
+      background: var(--white);
+      padding: 14px 16px;
+      margin: 14px 0 0;
+    }
+    .bars { display: grid; gap: 14px; }
+    .bar-block { margin-top: 8px; }
+    .bar-block h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    .bar {
+      display: grid;
+      grid-template-columns: minmax(140px, 220px) 1fr auto;
+      gap: 10px;
+      align-items: center;
+      margin: 0 0 8px;
+      font-size: 14px;
+    }
+    .track {
+      height: 14px;
+      background: var(--gray);
+    }
+    .fill {
+      height: 100%;
+      background: var(--violet);
+    }
+    .fill.ink { background: var(--ink); }
+    .val {
+      font-family: "Arial Black", Arial, sans-serif;
+      font-size: 14px;
+      min-width: 108px;
+      text-align: right;
+    }
+    .split {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+    }
+    .card {
+      border: 1px solid var(--gray);
+      padding: 16px 18px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 18px; color: var(--violet); }
+    .card p { margin: 0 0 8px; }
+    .card p:last-child { margin: 0; }
+    ul.clean { margin: 8px 0 0; padding-left: 18px; }
+    ul.clean li { margin: 0 0 6px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--gray);
+      vertical-align: top;
+    }
+    th {
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: var(--gray);
+    }
+    td.num {
+      font-family: "Arial Black", Arial, sans-serif;
+      white-space: nowrap;
+    }
+    .places {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .place {
+      border-top: 4px solid var(--violet);
+      border-right: 1px solid var(--gray);
+      border-bottom: 1px solid var(--gray);
+      border-left: 1px solid var(--gray);
+      padding: 14px;
+    }
+    .place h3 { margin: 0 0 6px; font-size: 18px; }
+    .place p { margin: 0; font-size: 14px; }
+    footer {
+      border-top: 1px solid var(--gray);
+      padding: 22px 0 40px;
+      font-size: 14px;
+    }
+    footer p { margin: 0 0 8px; }
+    @media (max-width: 800px) {
+      .zones, .split, .places { grid-template-columns: 1fr; }
+      .bar { grid-template-columns: 1fr; gap: 4px; }
+      .val { text-align: left; }
+      .role { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <img class="logo" src="assets/logo.png" alt="У Михалыча" />
+      <p class="motto">Делаем мир крепче</p>
+      <p class="kicker">Магазины крепежа и товаров для ремонта · осень 2026</p>
+      <h1>Сколько платить продавцу и кладовщику</h1>
+      <p class="lead">Все цифры на этой странице уже на руки, за полный месяц и по белой зарплате. Так человек сравнивает объявления. Где в вакансии было написано «до налога», вычтен НДФЛ 13%.</p>
+      <div class="meta">
+        <span>Срез вакансий: август–ноябрь 2026</span>
+        <span>Собрано 17 ноября 2026</span>
+        <span>Районный коэффициент 15% уже внутри суммы</span>
+      </div>
+      <nav class="jump">
+        <a href="#stavki">Ставки</a>
+        <a href="#sravnenie">С чем сравниваем</a>
+        <a href="#sela">Сёла и малые города</a>
+        <a href="#goroda">Берёзовский и Пышма</a>
+        <a href="#ekb">Екатеринбург</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="stavki">
+      <div class="wrap">
+        <h2>Какую сумму ставить</h2>
+        <p class="sub">Первая цифра — то, что пишем в вакансии. Вторая — на какого человека закрываем смену. При графике 2/2 по 11–12 часов берите верх. При 5/2 по 8 часов хватает середины.</p>
+        <div class="zones">
+          <article class="zone head">
+            <p class="where">Зона 1</p>
+            <h3>Сёла и малые города юга</h3>
+            <div class="role">
+              <div>
+                <b>Продавец в вакансии</b>
+                <strong>от 65 000</strong>
+                <span>хорошему 70–80 тыс.</span>
+              </div>
+              <div>
+                <b>Кладовщик в вакансии</b>
+                <strong>от 65 000</strong>
+                <span>хорошему 70–80 тыс.</span>
+              </div>
+            </div>
+          </article>
+          <article class="zone">
+            <p class="where">Отдельно внутри зоны 1</p>
+            <h3>Горный Щит</h3>
+            <div class="role">
+              <div>
+                <b>Продавец в вакансии</b>
+                <strong>от 70 000</strong>
+                <span>хорошему 75–85 тыс.</span>
+              </div>
+              <div>
+                <b>Кладовщик в вакансии</b>
+                <strong>от 70 000</strong>
+                <span>хорошему 80–90 тыс.</span>
+              </div>
+            </div>
+          </article>
+          <article class="zone">
+            <p class="where">Зона 2</p>
+            <h3>Берёзовский и Верхняя Пышма</h3>
+            <div class="role">
+              <div>
+                <b>Продавец в вакансии</b>
+                <strong>от 70 000</strong>
+                <span>хорошему 80–90 тыс.</span>
+              </div>
+              <div>
+                <b>Кладовщик в вакансии</b>
+                <strong>от 75 000</strong>
+                <span>хорошему 80–95 тыс.</span>
+              </div>
+            </div>
+          </article>
+          <article class="zone">
+            <p class="where">Зона 3</p>
+            <h3>Екатеринбург</h3>
+            <div class="role">
+              <div>
+                <b>Продавец в вакансии</b>
+                <strong>от 75 000</strong>
+                <span>хорошему 85–95 тыс.</span>
+              </div>
+              <div>
+                <b>Кладовщик в вакансии</b>
+                <strong>от 80 000</strong>
+                <span>хорошему 90–100 тыс.</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="note">В Курганово «Строительный Двор» уже стоит на улице Морозова, 7. Туда в вакансии лучше писать от 70 000. Опытный продавец, который считает крепёж, стоит на верхней границе. Новичок начинает с нижней и видит, куда вырастет после испытательного срока. 80 000 на руки в штатном расписании — это оклад 91 954 до налога. Пол по закону на руки в этой части области — 27 107.</p>
+      </div>
+    </section>
+
+    <section id="sravnenie">
+      <div class="wrap">
+        <h2>С чем человек сравнивает объявление</h2>
+        <p class="sub">Полоска показывает нижнюю границу на руки. Длиннее полоска — выше порог, с которого начинается вакансия. Наша ставка для Екатеринбурга стоит рядом с теми, кого кандидат откроет в тот же вечер.</p>
+        <div class="split">
+          <div>
+            <div class="bar-block">
+              <h3>Продавец, нижняя граница</h3>
+              <div class="bars">
+                <div class="bar">
+                  <div>Наша вакансия, город</div>
+                  <div class="track"><div class="fill" style="width:75%"></div></div>
+                  <div class="val">75 000</div>
+                </div>
+                <div class="bar">
+                  <div>Петрович</div>
+                  <div class="track"><div class="fill ink" style="width:69.6%"></div></div>
+                  <div class="val">69 600</div>
+                </div>
+                <div class="bar">
+                  <div>Строительный Двор</div>
+                  <div class="track"><div class="fill ink" style="width:60%"></div></div>
+                  <div class="val">60 000</div>
+                </div>
+                <div class="bar">
+                  <div>Лемана ПРО</div>
+                  <div class="track"><div class="fill ink" style="width:52.2%"></div></div>
+                  <div class="val">52 200</div>
+                </div>
+                <div class="bar">
+                  <div>Магнит, Верхняя Пышма</div>
+                  <div class="track"><div class="fill ink" style="width:39.2%"></div></div>
+                  <div class="val">39 150</div>
+                </div>
+              </div>
+            </div>
+            <div class="bar-block">
+              <h3>Кладовщик, нижняя граница</h3>
+              <div class="bars">
+                <div class="bar">
+                  <div>Стройметиз, крепёж</div>
+                  <div class="track"><div class="fill ink" style="width:90%"></div></div>
+                  <div class="val">90 000</div>
+                </div>
+                <div class="bar">
+                  <div>Наша вакансия, город</div>
+                  <div class="track"><div class="fill" style="width:80%"></div></div>
+                  <div class="val">80 000</div>
+                </div>
+                <div class="bar">
+                  <div>УВМ-СТАЛЬ</div>
+                  <div class="track"><div class="fill ink" style="width:70%"></div></div>
+                  <div class="val">70 000</div>
+                </div>
+                <div class="bar">
+                  <div>Гипермаркет ДОМ</div>
+                  <div class="track"><div class="fill ink" style="width:65%"></div></div>
+                  <div class="val">65 000</div>
+                </div>
+                <div class="bar">
+                  <div>Строительный Двор</div>
+                  <div class="track"><div class="fill ink" style="width:60%"></div></div>
+                  <div class="val">60 000</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="card">
+            <h3>Почему не средняя по области</h3>
+            <p>Средняя по Свердловской области за январь–август 2026 года — 81 961 на руки. По Екатеринбургу и Верхней Пышме за 2025 год муниципальная средняя была выше 100 920. Эти цифры держат заводы и УГМК.</p>
+            <p>Торговля в целом за январь–февраль 2026 года — 65 849 на руки. Продавец «Пятёрочки» в Верхней Пышме получает 43 674–58 986. Это другая работа: консультант по крепежу считает расход и отвечает за полку.</p>
+            <p>У «Лемана ПРО» обычный месяц без сверхурочных выходит около 52 900 на руки. Верх их объявления — 68 338, и это ещё без квартальной премии. В карточке час стоит 269 рублей на руки, питание — 5 220.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section id="sela">
+      <div class="wrap">
+        <h2>Сёла и малые города</h2>
+        <p class="sub">Горный Щит, Арамиль, Белоярский, Верхнее Дуброво, Сысерть, Бородулино, Курганово. Арамиль и Сысерть по статусу города, около 20 тысяч человек. Платить их всё равно этой зоной: люди уже сравнивают себя с сетью, а не с сельской кассой.</p>
+        <div class="places">
+          <article class="place">
+            <h3>Горный Щит</h3>
+            <p>Село Чкаловского района, 5 726 человек, 19 км до центра. На Будённого стоят «Строймаркет» и павильоны. До городских складов человек доезжает на автобусе, поэтому ставка ближе к городу.</p>
+          </article>
+          <article class="place">
+            <h3>Арамиль</h3>
+            <p>20 559 человек. «Стройсервис» на Пролетарской, 91, и «ДомоСтрой». Кладовщик автосервиса здесь уже получает от 80 000. Свои суммы строймагазины не публикуют.</p>
+          </article>
+          <article class="place">
+            <h3>Сысерть</h3>
+            <p>20 245 человек. «Строймаркет» и «Стройсити» на улице Быкова. Открытой вилки нет. Сеть зовёт людей отсюда на южные магазины за 60 000–90 000 и оплачивает дорогу.</p>
+          </article>
+          <article class="place">
+            <h3>Белоярский</h3>
+            <p>13 124 человека. Отдельный строймагазин в справочниках не подтвердился. «Строительный Двор» прямо пишет компенсацию проезда из Белоярского.</p>
+          </article>
+          <article class="place">
+            <h3>Верхнее Дуброво</h3>
+            <p>4 622 человека, около 37 км до центра. Магазин «Перестройка» на улице Строителей, 1. Проезд до сети тоже компенсируют.</p>
+          </article>
+          <article class="place">
+            <h3>Бородулино и Курганово</h3>
+            <p>1 190 и 920 человек. В Бородулино удобнее одна роль на зал и склад, 75 000–85 000. В Курганово на Морозова, 7 уже работает «Строительный Двор».</p>
+          </article>
+        </div>
+        <p class="note">Вакансия «Кашино» у «Строительного Двора» — 60 000–90 000 на руки и проезд из Арамили, Белоярского, Верхнего Дуброво и соседних деревень. «Заповедник» в посёлке Габиевский — 65 000–90 000. Магазин в селе выигрывает тем, что до работы не надо ехать. Ставка ниже 65 000 этот довод не перекрывает.</p>
+      </div>
+    </section>
+
+    <section id="goroda">
+      <div class="wrap">
+        <h2>Берёзовский и Верхняя Пышма</h2>
+        <p class="sub">Это уже городской рынок. До Екатеринбурга люди ездят на обычную смену, а в Пышме складские деньги держат ещё и заводы.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Кто и где</th>
+              <th>Роль</th>
+              <th>На руки</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Строительный Двор, Берёзовский, Пролетарская, 4А</td>
+              <td>Продавец</td>
+              <td class="num">60 000–90 000</td>
+            </tr>
+            <tr>
+              <td>Строительный Двор, Берёзовский, Восточная, 11</td>
+              <td>Продавец</td>
+              <td class="num">от 80 000</td>
+            </tr>
+            <tr>
+              <td>Строительный Двор, Верхняя Пышма, Бажова, 28А</td>
+              <td>Продавец</td>
+              <td class="num">60 000–90 000</td>
+            </tr>
+            <tr>
+              <td>ProDiesel, Берёзовский</td>
+              <td>Кладовщик</td>
+              <td class="num">80 000</td>
+            </tr>
+            <tr>
+              <td>Лакталис, Берёзовский</td>
+              <td>Кладовщик</td>
+              <td class="num">от 65 000</td>
+            </tr>
+            <tr>
+              <td>УГМК-Агро и Римэкс, Верхняя Пышма</td>
+              <td>Кладовщик</td>
+              <td class="num">от 60 000–62 000</td>
+            </tr>
+            <tr>
+              <td>Пятёрочка, ночной склад, Берёзовский</td>
+              <td>Комплектовщик</td>
+              <td class="num">86 130–113 100</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">Ночной склад «Пятёрочки» — распределительный центр, не кладовая магазина. Его стоит помнить как место, куда может уйти сильный кладовщик. Рядом ещё «ДомоСтрой» на Александровском проспекте, 1, и вторая точка «Строительного Двора» на Орджоникидзе, 1. По ним отдельной вилки в этой выборке нет.</p>
+      </div>
+    </section>
+
+    <section id="ekb">
+      <div class="wrap">
+        <h2>Екатеринбург</h2>
+        <p class="sub">Рядом и большой зал, и склад крепежа. Продавцу, который консультирует, нужно 85 000–95 000. Кладовщику, который принимает, собирает и ведёт документы, — 90 000–100 000.</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Кто и где</th>
+              <th>Роль</th>
+              <th>На руки</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Строительный Двор, Академика Парина, 35/2</td>
+              <td>Продавец</td>
+              <td class="num">60 000–90 000</td>
+            </tr>
+            <tr>
+              <td>Петрович, Лучистая, 24</td>
+              <td>Продавец</td>
+              <td class="num">от 69 600</td>
+            </tr>
+            <tr>
+              <td>Лемана ПРО, Металлургов, 74</td>
+              <td>Продавец</td>
+              <td class="num">52 200–68 338</td>
+            </tr>
+            <tr>
+              <td>Строительный Двор, Шефская, 1</td>
+              <td>Кладовщик</td>
+              <td class="num">60 000–100 000</td>
+            </tr>
+            <tr>
+              <td>Стройметиз, Маневровая, 43А</td>
+              <td>Кладовщик крепежа</td>
+              <td class="num">90 000–95 000</td>
+            </tr>
+            <tr>
+              <td>УВМ-СТАЛЬ, Рябинина, 32А</td>
+              <td>Кладовщик</td>
+              <td class="num">от 70 000</td>
+            </tr>
+            <tr>
+              <td>Гипермаркет ДОМ, Высоцкого, 50</td>
+              <td>Кладовщик</td>
+              <td class="num">65 000–75 000</td>
+            </tr>
+            <tr>
+              <td>Мастер-Сантехник, Орджоникидзе, 21</td>
+              <td>Кладовщик</td>
+              <td class="num">55 000–63 900</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">У «Стройметиза» к 90 000–95 000 добавляется 7 100 на питание. Это самый близкий склад по товару. В карточке «Максидома» на Шефской, 107 вид суммы не указан: если 51 000 были до налога, на руки выходит 44 370. В вилку эту карточку не брали. Крупные залы для сравнения: «Лемана ПРО» на Металлургов и в Базовом переулке, «Петрович», «Максидом» на Шефской и Тверитина, «Строительный Двор» на Шефской.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Цифры взяты из открытых вакансий, это не расчётные листки. Часть объявлений к ноябрю могла закрыться. Местные магазины в Сысерти, Арамили и Горном Щите сумму не публикуют, поэтому по ним нет строки «они платят столько-то».</p>
+      <p>Таблицы с адресами, датами и ссылками на вакансии лежат в папке data этого репозитория.</p>
+    </div>
+  </footer>
+</body>
+</html>
